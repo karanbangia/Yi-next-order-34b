@@ -2,7 +2,7 @@
 
 cd "$(dirname "${BASH_SOURCE[0]}")/../sft/"
 
-export CUDA_VISIBLE_DEVICES=0,1,2,3 #limit parallelism to avoid cpu oom
+export CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 #limit parallelism to avoid cpu oom
 
 deepspeed main.py \
 	--data_path ../yi_train_dataset \
