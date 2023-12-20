@@ -22,5 +22,4 @@ deepspeed main.py \
 	--zero_stage 2 \
 	--deepspeed \
 	--offload \
-  --max_split_size_mb 1000
 	--output_dir /finetuned_model
