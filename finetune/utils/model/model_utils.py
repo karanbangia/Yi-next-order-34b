@@ -1,4 +1,5 @@
 import math
+import torch
 
 from transformers import AutoConfig
 from transformers.deepspeed import HfDeepSpeedConfig
@@ -33,6 +34,7 @@ def create_hf_model(
             config=model_config,
             trust_remote_code=True,
             use_flash_attention_2=True,
+            torch_dtype=torch.float16,
         )
     else:
         model = model_class.from_pretrained(

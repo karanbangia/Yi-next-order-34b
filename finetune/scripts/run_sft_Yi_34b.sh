@@ -5,8 +5,8 @@ cd "$(dirname "${BASH_SOURCE[0]}")/../sft/"
 export CUDA_VISIBLE_DEVICES=0,1,2,3 #limit parallelism to avoid cpu oom
 
 deepspeed main.py \
-	--data_path /DATA_PATH/ \
-	--model_name_or_path /MODEL_PATH/ \
+	--data_path ../yi_train_dataset \
+	--model_name_or_path ../../../Yi-34B-Chat \
 	--per_device_train_batch_size 1 \
 	--per_device_eval_batch_size 1 \
 	--max_seq_len 4096 \
